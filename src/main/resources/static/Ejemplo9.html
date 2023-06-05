@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/Estilos.css" rel="stylesheet" type="text/css"/> <!-- REFERENCIA DE HOJA DE ESTILOS - -->
+        <!--EJ: HOJA DE ESTILOS "LOCAL" ESTA MANDA COMO PRIORIDAD- -->
+        <style> 
+            .parrafoSegundario{
+                color:coral;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Ejemplo de Formularios - -->
+        <h1 id="TituloPrincipal">Ejemplo 9</h1>
+        <br>
+        <br>
+        <form action="#">  <!-- Action indica lo que va a pasar con la información que se recolecta - -->  <!-- method="#" La forma en que va enviar los datos, petición al servidor, si vamos a enviar un elemento usamos post - -->
+            <label>Nombre:</label> <!-- Etiqueta del campo que solicitamos - -->
+            <input type="text" name="Nombre" id="Nombre" placeholder="Digite su nombre" /> <!-- Etiquetas de entrada, con type aclaramos que tipo de entrada es, ID es ÚNICO no se puede repetir, estos cierran en LINEA - --> 
+            <br>
+            <label>Apellidos: </label> 
+            <input type="text" name="Apellidos" id="Apellidos" size="50" placeholder="Digite su apellido"/> 
+            <br>
+            <label>Password: </label> 
+            <input type="password" name="Password" id="Password" placeholder="Digite su contraseña" /> 
+            <br>
+            <!-- Botón submit que va a enviar la info a la acción que especifique antes - -->
+            <input type="submit" value="Enviar" />
+        </form>
+        
+        <P class="parrafosEjemplo">Prueba de texto 1</P> <!-- REFERENCIA DE HOJA DE ESTILOS para párrafos uso .NombreClase en archivo css - -->
+        <P class="parrafosEjemplo parrafoSegundario" style= "color:darkcyan;">Prueba de texto 2</P> <!-- Si uso 2 clases una sobre-escribe la otra, manda aún más el estilo en linea, le gana a todos (el último aplicado) - -->
+        <p class="parrafosEjemplo">Prueba de texto 3</P>
+        
+        <p> Párrafo de prueba para clase de estilos p </p> 
+        
+    </body>
+</html>
+
+<!-- HOJAS DE ESTILO: para utilizar en nuestras páginas  -->
+<!-- Se utilizan selectores para identificar a qué se le va aplicar el estilo   -->
+<!-- El archivo css se debe llamar en la pagina que quiero utilizarla, va referenciadas en el head  -->
