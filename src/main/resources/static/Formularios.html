@@ -30,8 +30,8 @@
                    <label>month </label><input type="month" name="month"><br/>
                    <label>number </label><input type="number" name="number" value="50" min="10" max="60"><br/>
                    <label>password </label><input type="password" name="password"><br/>
-                   <label>radio </label>Mañana<input type="radio" name="horario" value="1"><br/>
-                   <label>radio </label>Tarde<input type="radio" name="horario" value="2"><br/>
+                   <label>radio </label>Mañana<input type="radio" name="horario" value="1"><br/> <!--Los radio DEBEN tener el mismo "name" para que formen 1 solo, esto hacer que el usuario solo pueda escoger 1 de tres opciones- -->
+                   <label>radio </label>Tarde<input type="radio" name="horario" value="2"><br/> <!--Tiene texto antes del input pero el valor que se envie es el encerrado en Value en este caso"1, 2 o 3"- -->
                    <label>radio </label>Noche<input type="radio" name="horario" value="3"><br/>
                    <label>range </label><input type="range" value="24" min="1" max="100" 
                                                oninput="this.nextElementSibling.value = this.value">                
