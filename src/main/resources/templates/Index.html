@@ -1,0 +1,12 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org"> <!-- Thymeleaf -->
+    
+    <head th:replace="Layout/plantilla :: head"> <!-- Agrego fragmento que tengo en html plantilla, debo especififcar el folder/nombre de archivo : : cual fragmento voy a utilizar, 
+                                                 el fragmento que utilizo debe ser del mismo tipo en este caso head --> 
+    </head>
+    <body>
+        <header th:replace="Layout/plantilla :: header" />
+        <footer th:replace="Layout/plantilla :: footer" />
+    </body>
+</html>
