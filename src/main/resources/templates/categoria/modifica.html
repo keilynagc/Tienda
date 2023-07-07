@@ -1,0 +1,14 @@
+     <!-- Se utiliza el fragmento 4 de modifica -->
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org"> 
+    
+    <head th:replace="Layout/plantilla :: head"> 
+    </head>
+    <body>
+        <header th:replace="Layout/plantilla :: header" />
+        
+        <section th:replace="categoria/fragmentos :: editarCategoria"/>  <!-- editarCategoria porque es el nombre del fragmento que uso acá -->
+        
+        <footer th:replace="Layout/plantilla :: footer" />
+    </body>
+</html>

@@ -20,6 +20,13 @@
                         </button>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-3">   
+                        <a th:href="@{/categoria/nuevo}" 
+                           class="btn btn-info">
+                            <i class="fas fa-plus"></i> [[#{accion.nuevo}]]</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -80,7 +87,7 @@
                                             <th></th></tr>
                                     </thead>
                                     <tbody>
-                                        <tr th:each="categoria, contador : ${categorias}"> <-<!-- Por cada item de la lista en este caso "categoria" se va a cumplir lo que está dentro -->
+                                        <tr th:each="categoria, contador : ${categorias}"> <!-- Por cada item de la lista en este caso "categoria" se va a cumplir lo que está dentro -->
                                             <td>[[${contador.count}]]</td>
                                             <td>[[${categoria.descripcion}]]</td>
                                             <td th:text="${categoria.activo} ? 'Activa' : 'Inactiva'" />
@@ -135,8 +142,8 @@
                                                 <div class="mb-3">
                                                     <label for="descripcion">[[#{categoria.descripcion}]]</label>
                                                     <input type="text" class="form-control" 
-                                                           name="descripcion" th:field="*{descripcion}"
-                                                           required="true">
+                                                           name="descripcion" th:field="*{descripcion}" 
+                                                           required="true"> <!-- Lo que va dentro de name y field es para extraer la variable por lo que deben llamarse igual al que coloqué en domain -->
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="activo">[[#{categoria.activo}]]</label>
