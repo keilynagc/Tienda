@@ -28,6 +28,7 @@ public class CategoriaController {
     public String inicio(Model model) {
         log.info("Consumiendo el recurso /categoria/listado");
         List<Categoria> categorias = categoriaService.getCategorias(false);
+       // List<Categoria> categorias = categoriaService.getForDescripcion("Monitores"); //Para buscar filtrando por el valor que le envíe
         
         model.addAttribute("categorias",categorias);
         model.addAttribute("totalCategorias", categorias.size());
