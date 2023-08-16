@@ -4,6 +4,7 @@
  */
 package com.tienda.controller;
 
+import com.tienda.Service.ProductoService;
 import com.tienda.dao.UsuarioDao;
 import com.tienda.domain.Usuario;
 import jakarta.servlet.http.HttpSession;
@@ -22,28 +23,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
     
     @Autowired
-    UsuarioDao usuarioDao;
+    ProductoService productoservice;
             
     @RequestMapping("/")
     public String page(Model model, HttpSession session) {
-        
-//        String imagen = (String)session.getAttribute("usuarioImagen");
-//        model.addAttribute("avatar",imagen);
-    
-//Obtener usuario logueada
-//    Object principal= SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//    UserDetails user= null;
-//    if (principal instanceof UserDetails){
-//    user = (UserDetails) principal;
-//    }
-//    
-//    if (user != null){
-//    Usuario usuario = usuarioDao.findByUsername(user.getUsername());
-//    session.setAttribute("Email", usuario.getCorreo());
-//    }
- 
-
-    return "Index"; //vista guardada en templates NO en static// 
+    var productos =  productoservice.getProductos(true);
+     model.addAttribute("productos", productos);
+    return "index"; //vista guardada en templates NO en static// 
     }
     
 }

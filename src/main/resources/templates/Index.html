@@ -7,6 +7,9 @@
     </head>
     <body>
         <header th:replace="Layout/plantilla :: header" />
+        
+        <section th:replace="~{carrito/fragmentos :: listadoProductos}"/>
+        
         <footer th:replace="Layout/plantilla :: footer" />
     </body>
 </html>
